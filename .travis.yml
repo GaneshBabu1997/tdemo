@@ -5,7 +5,7 @@ python:
 
 install:
   - easy_install distribute
-  - pip install -r requirements.txt
+  - pip install requirements.txt
   - pip install pytest
 
 script:
