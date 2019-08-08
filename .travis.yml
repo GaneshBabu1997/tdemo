@@ -1,6 +1,12 @@
-  language: python
-  install:
-  - easy_install distribute
+language: python
+
+python:
+  - "2.7"
+
+install:
   - pip install -r requirements.txt
-  script:
-  - file5.py
+  - pip install pytest
+
+script:
+  - py.test -v --color=yes --exitfirst --showlocals --durations=5
+  - python file5.py some args
